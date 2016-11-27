@@ -1,4 +1,5 @@
 # react-down
+[![npm version](https://badge.fury.io/js/react-down.svg)](https://badge.fury.io/js/react-down)
 
 Transform Markdown to ReactElements.
 
