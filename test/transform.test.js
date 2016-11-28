@@ -1,8 +1,9 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import transform from '../lib'
+import transform from '../lib/transform'
 
-describe('react-down', () => {
+describe('transform', () => {
+
   it('should transform headings', () => {
     const src = '# Hello, world!\n## This is a test.'
 

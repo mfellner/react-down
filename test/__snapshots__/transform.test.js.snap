@@ -1,4 +1,4 @@
-exports[`react-down should inline code 1`] = `
+exports[`transform should inline code 1`] = `
 <div>
   <p>
     This is 
@@ -9,7 +9,7 @@ exports[`react-down should inline code 1`] = `
 </div>
 `;
 
-exports[`react-down should transform blockquotes 1`] = `
+exports[`transform should transform blockquotes 1`] = `
 <div>
   <blockquote>
     <p>
@@ -19,7 +19,7 @@ exports[`react-down should transform blockquotes 1`] = `
 </div>
 `;
 
-exports[`react-down should transform emphasis 1`] = `
+exports[`transform should transform emphasis 1`] = `
 <div>
   <p>
     <em>
@@ -33,7 +33,7 @@ exports[`react-down should transform emphasis 1`] = `
 </div>
 `;
 
-exports[`react-down should transform headings 1`] = `
+exports[`transform should transform headings 1`] = `
 <div>
   <h1>
     Hello, world!
@@ -44,13 +44,13 @@ exports[`react-down should transform headings 1`] = `
 </div>
 `;
 
-exports[`react-down should transform horizontal rules 1`] = `
+exports[`transform should transform horizontal rules 1`] = `
 <div>
   <hr />
 </div>
 `;
 
-exports[`react-down should transform images 1`] = `
+exports[`transform should transform images 1`] = `
 <div>
   <p>
     <img
@@ -60,7 +60,7 @@ exports[`react-down should transform images 1`] = `
 </div>
 `;
 
-exports[`react-down should transform links 1`] = `
+exports[`transform should transform links 1`] = `
 <div>
   <p>
     <a
@@ -71,7 +71,7 @@ exports[`react-down should transform links 1`] = `
 </div>
 `;
 
-exports[`react-down should transform paragraphs 1`] = `
+exports[`transform should transform paragraphs 1`] = `
 <div>
   <p>
     First.
@@ -82,7 +82,7 @@ exports[`react-down should transform paragraphs 1`] = `
 </div>
 `;
 
-exports[`react-down should transform tables 1`] = `
+exports[`transform should transform tables 1`] = `
 <div>
   <table>
     <thead>
