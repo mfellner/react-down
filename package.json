@@ -12,7 +12,8 @@
   ],
   "scripts": {
     "dist": "webpack -p",
-    "test": "NODE_ENV=test jest --coverage"
+    "test": "NODE_ENV=test jest --coverage",
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "dependencies": {
     "camel-case": "3.0.0",
