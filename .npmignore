@@ -6,3 +6,5 @@ yarn.lock
 lib/
 node_modules/
 test/
+coverage/
+example/
