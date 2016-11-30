@@ -14,10 +14,33 @@ import ReactDOM from 'react-dom'
 const src = `# Hello, Markdown!
 This is an *example*.`
 
+const main = document.getElementById('main')
+
 // Using the React component:
-ReactDOM.render(<ReactDown src={src}/>, document.getElementById('main'))
+ReactDOM.render(<ReactDown src={src}/>, main)
 
 // Using the transform function:
-const element = transform(src)
-ReactDOM.render(element, document.getElementById('main'))
+ReactDOM.render(transform(src), main)
+```
+
+### Plugins
+
+```javascript
+import React from 'react'
+import ReactDown, { combinePlugins, transform } from ' react-down'
+
+function myPlugin(type, props, children) {
+  if (type === 'h1') {
+    return React.createElement('div', null, children)
+  }
+}
+
+const main = document.getElementById('main')
+
+// Using the React component:
+ReactDOM.render(<ReactDown src="..." plugins={[myPlugin]}/>, main)
+
+// Using the transform function:
+const myTransform = combinePlugins(myPlugin, /*, ... */)(transform)
+ReactDOM.render(myTransform(src), main)
 ```

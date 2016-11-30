@@ -1,0 +1,14 @@
+exports[`plugins should combine plugins 1`] = `
+<div>
+  <span>
+    Hello, world!
+  </span>
+  <h2>
+    This is a 
+    <bold>
+      test
+    </bold>
+    .
+  </h2>
+</div>
+`;
