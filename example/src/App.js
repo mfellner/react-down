@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ReactDown from 'react-down'
 import styled from 'styled-components'
+import plugins from './plugins'
 import { Page, Row, Column } from 'hedron'
 
 const TextArea = styled.textarea`
@@ -9,11 +10,20 @@ const TextArea = styled.textarea`
   height: auto;
 `
 
+const DEFAULT_TEXT = `# Hello, react-down!
+
+*This* is **markdown**.'
+
+    function() {
+      console.log('what is code')
+    }
+`
+
 export default class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      src: '# Hello, react-down!\n\n*This* is **markdown**.\n'
+      src: DEFAULT_TEXT
     }
   }
 
@@ -36,7 +46,7 @@ export default class App extends Component {
             onChange={this.onInputChanged.bind(this)}/>
         </Column>
         <Column sm={12} md={6}>
-          <ReactDown src={this.state.src}/>
+          <ReactDown src={this.state.src} plugins={plugins}/>
         </Column>
       </Row>
     </Page>

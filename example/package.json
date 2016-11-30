@@ -10,6 +10,7 @@
     "hedron": "0.3.0",
     "react": "15.4.1",
     "react-down": "file:./../",
+    "react-syntax-highlighter": "3.0.0",
     "styled-components": "1.1.2"
   },
   "devDependencies": {
