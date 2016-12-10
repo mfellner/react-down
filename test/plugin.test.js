@@ -19,4 +19,21 @@ describe('plugins', () => {
 
     expect(component.toJSON()).toMatchSnapshot()
   })
+
+  it('should receive the token argument', () => {
+    const tokens = []
+    const plugin = (type, props, children, token) => {
+      tokens.push(token)
+    }
+
+    const src = '# Hello, world!\n## This is a *test*.'
+    const pluggedTransform = combinePlugins(plugin)(transform)
+    const component = renderer.create(pluggedTransform(src))
+
+    expect(tokens.length).toBe(4)
+    expect(tokens[0].tag).toBe('h1')
+    expect(tokens[1].tag).toBe('em')
+    expect(tokens[2].tag).toBe('h2')
+    expect(tokens[3]).toBe(null)
+  })
 })
