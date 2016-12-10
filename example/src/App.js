@@ -1,22 +1,24 @@
 import React, { Component } from 'react'
-import ReactDown from 'react-down'
 import styled from 'styled-components'
 import plugins from './plugins'
+import TextArea from './TextArea'
+import ReactDown from '../../lib'
 import { Page, Row, Column } from 'hedron'
-
-const TextArea = styled.textarea`
-  max-width: 100%;
-  min-width: 100%;
-  height: auto;
-`
 
 const DEFAULT_TEXT = `# Hello, react-down!
 
-*This* is **markdown**.'
+*This* is **markdown**.
 
-    function() {
-      console.log('what is code')
-    }
+~~~javascript
+function() {
+  console.log('what is code')
+}
+~~~
+`
+
+const Title = styled.h1`
+  color: #883DAA;
+  font-family: "Helvetica Neue", sans;
 `
 
 export default class App extends Component {
@@ -27,23 +29,20 @@ export default class App extends Component {
     }
   }
 
-  onInputChanged(e) {
-    this.setState({src: e.target.value})
+  onTextChanged(text) {
+    this.setState({src: text})
   }
 
   render() {
     return <Page>
       <Row>
         <Column sm={12} md={12}>
-          <h1>react-down</h1>
+          <Title>react-down ⚛ ⬇</Title>
         </Column>
       </Row>
       <Row>
         <Column sm={12} md={6}>
-          <TextArea
-            rows={10}
-            value={this.state.src}
-            onChange={this.onInputChanged.bind(this)}/>
+          <TextArea text={DEFAULT_TEXT} onChanged={this.onTextChanged.bind(this)}/>
         </Column>
         <Column sm={12} md={6}>
           <ReactDown src={this.state.src} plugins={plugins}/>

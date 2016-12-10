@@ -16,7 +16,8 @@ module.exports = {
         exclude: [path.resolve(__dirname, 'node_modules')],
         loader: 'babel-loader',
         options: {
-          presets: ['react', ['es2015', {modules: false}]]
+          presets: ['react', ['es2015', {modules: false}], 'stage-2'],
+          babelrc: false
         }
       },
       {
