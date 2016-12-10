@@ -1,6 +1,6 @@
 {
   "name": "react-down",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Native React components from Markdown.",
   "main": "dist/index.js",
   "repository": "git@github.com:mfellner/react-down.git",
