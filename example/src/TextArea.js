@@ -11,14 +11,15 @@ const TextBox = styled.textarea`
 
 export default class TextArea extends Component {
   static propTypes = {
-    text: PropTypes.string,
+    defaultText: PropTypes.string,
+    rows: PropTypes.number,
     onChanged: PropTypes.func
   }
 
   constructor(props) {
     super(props)
     this.state = {
-      text: this.props.text
+      text: this.props.defaultText || ''
     }
   }
 
@@ -30,9 +31,10 @@ export default class TextArea extends Component {
   }
 
   render() {
-    const props = {ref: node => this.node = node}
+    const style = {resize: this.props.rows ? 'vertical' : 'none'}
     return <TextBox
-      rows={10}
+      style={style}
+      rows={this.props.rows || (() => this.state.text.split('\n').length)()}
       value={this.state.text}
       onChange={this.onInputChanged.bind(this)}/>
   }

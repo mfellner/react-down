@@ -1,4 +1,4 @@
-# react-down
+# <span style="color: #883DAA;font-family: "Helvetica Neue", sans;">react-down ⚛ ⬇</span>
 [![npm version](https://badge.fury.io/js/react-down.svg)](https://badge.fury.io/js/react-down)
 [![Build Status](https://travis-ci.org/mfellner/react-down.svg?branch=master)](https://travis-ci.org/mfellner/react-down)
 [![Coverage Status](https://coveralls.io/repos/github/mfellner/react-down/badge.svg?branch=master)](https://coveralls.io/github/mfellner/react-down?branch=master)
@@ -7,7 +7,7 @@ Transform Markdown to React elements.
 
 ### Introduction
 
-react-down is a simple library and React component to transform Markdown formatted text into native React elements. react-down uses [markdown-it](https://markdown-it.github.io) to parse Markdown and directly translate it into a structure of React element instances.
+react-down is a simple library and React component to transform Markdown formatted text into native React elements. react-down uses [markdown-it](https://markdown-it.github.io) to parse Markdown and directly translate it into a structure of React elements.
 
 ### Usage
 
