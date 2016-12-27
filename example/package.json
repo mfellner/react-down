@@ -2,7 +2,7 @@
   "name": "react-down-example",
   "private": true,
   "scripts": {
-    "dist": "webpack -p",
+    "dist": "rm -f dist/* && webpack -p",
     "start": "webpack-dev-server --inline --content-base dist",
     "publish": "gh-pages -d ./dist"
   },

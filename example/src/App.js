@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import styled from 'styled-components'
 import plugins from './plugins'
 import TextArea from './TextArea'
-import ReactDown from '../../lib'
+import ReactDown from '../../'
 import { Page, Row, Column } from 'hedron'
 
 const Title = styled.h1`
